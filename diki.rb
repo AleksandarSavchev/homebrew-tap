@@ -5,23 +5,23 @@
 class Diki < Formula
   desc "Command-line tool for compliance checks"
   homepage "https://gardener.cloud"
-  version "$version"
+  version "1.5.0"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gardener/diki/releases/download/v0.14.0/diki-darwin-arm64"
-      sha256 "dc8279007a4a0b94910f09fa0ddc6c31fe7e9937ed1c8a662c1e1a299f3133e1"
+      url "https://github.com/AleksandarSavchev/diki/releases/download/v1.5.0/diki-darwin-arm64"
+      sha256 "a98e60fb3ee26db9e8f6b25661b767334aecc92018fd18d72ca539cb8af022a9"
     else
-      url "https://github.com/gardener/diki/releases/download/v0.14.0/diki-darwin-amd64"
-      sha256 "a48a27333cf267d555197c9a82ada46892a337d2dcf1c28bfd82f8f7da094844"
+      url "https://github.com/AleksandarSavchev/diki/releases/download/v1.5.0/diki-darwin-amd64"
+      sha256 "cc07ccaa42f45701c4a6f508df0c14e57115803c8cbff75c1d83c7c1e4da7a20"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gardener/diki/releases/download/v0.14.0/diki-linux-arm64"
-      sha256 "ba1f2ef571d423d0870c8586aeb3623f0d3cdf0a866b5bb86bd254c73d521c15"
+      url "https://github.com/AleksandarSavchev/diki/releases/download/v1.5.0/diki-linux-arm64"
+      sha256 "78cffd46856fdffb8ea40afab7ce8ad5d9dbca0a0dabda1504363d952142e74b"
     else
-      url "https://github.com/gardener/diki/releases/download/v0.14.0/diki-linux-amd64"
-      sha256 "9896a3975275041e7140b4b277d9d72f7f52bb3624a0aa5e2e8496adb3f4eda6"
+      url "https://github.com/AleksandarSavchev/diki/releases/download/v1.5.0/diki-linux-amd64"
+      sha256 "d43f86e16a7002417b0b15b5b8938932e66ee5b8e589dc1f30d710d4528f0456"
       depends_on arch: :x86_64
     end
   end
@@ -33,8 +33,8 @@ class Diki < Formula
   def caveats
     <<~EOS
       [HINT]
-      Run \`diki view provider\` to view supported providers and rulesets.
-      Run \`diki --help\` for more information.
+      Run `diki view provider` to view supported providers and rulesets.
+      Run `diki --help` for more information.
     EOS
   end
 
